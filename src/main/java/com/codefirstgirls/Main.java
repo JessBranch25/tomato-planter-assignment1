@@ -1,8 +1,6 @@
 package com.codefirstgirls;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -18,6 +16,7 @@ public class Main {
         System.out.println("Gardener's Delight,\nTumbling Tom,\nSungold,\nBlack Cherry,\nGreen Zebra");
 
         String tomatoChoice = scanner.nextLine();
+        System.out.println("*******************************");
         System.out.println("THANKS! HOW MANY WOULD YOU LIKE TO PLANT?");
         int amountToCreate = scanner.nextInt();
 
@@ -48,10 +47,21 @@ public class Main {
 
         //display planted tomatoes
         if (!plantedTomatoes.isEmpty()) {
-            System.out.println("You've planted the following tomatoes:");
-            for (int i = 0; i < plantedTomatoes.size(); i++) {
+            System.out.println("*******************************");
+            System.out.println("YOU'VE PLANTED "+plantedTomatoes.size()+" "+tomatoChoice.toUpperCase()+" TOMATOES");
+            System.out.println("*******************************");
+            System.out.println("YOUR TOMATO CHARACTERISTICS ARE AS FOLLOWS:");
+            plantedTomatoes.getFirst().printTomatoInformation();
+            System.out.println("*******************************");
+            System.out.println("YOUR TOMATO PLANTS HAVE CUTE NAMES SO THAT YOU CAN TALK TO THEM");
 
+            for (int i = 0; i < plantedTomatoes.size(); i++) {
+                String name = plantedTomatoes.get(i).getName();
+                System.out.println("Tomato "+(i+1)+" is called "+name);
             }
+
+            System.out.println("*******************************");
+            System.out.println("PLEASE LOVE AND CARE FOR YOUR TOMATOES, TALKING TO YOUR TOMATOES IS A NICE WAY TO REMIND THEM THAT YOU LOVE THEM");
         }
 
 
