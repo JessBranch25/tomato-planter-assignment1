@@ -5,7 +5,6 @@ This is a Java project to help me build my Java skills and prepare for tomato pl
 ### Running instructions 
 - Clone this repo from GitHub and it is ready to run
 - Within `Main` is the code to start the app, the outputs will be displayed on the console and will require user input to run properly
-- Currently, the code is only able to generate new objects for Sungold tomatoes, this will be implemented properly soon. 
 - Enjoy!
 
 ### Notes
