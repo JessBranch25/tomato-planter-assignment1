@@ -1,11 +1,12 @@
-# ASSIGNMENT 1
+# Welcome to the tomato planter 🍅
 
-Welcome to the CFG Java +Masters first assignment! 
+This is a Java project to help me build my Java skills and prepare for tomato planting season. These are some of my favourite tomato species to plant, I hope that you enjoy and consider planting some of these varieties this summer. 
 
-Use this code as the starter code for your project (you do not have to, and you may edit it). 
+### Running instructions 
+- Clone this repo from GitHub and it is ready to run
+- Within `Main` is the code to start the app, the outputs will be displayed on the console and will require user input to run properly
+- Currently, the code is only able to generate new objects for Sungold tomatoes, this will be implemented properly soon. 
+- Enjoy!
 
-Within `Main` you will find the code to start your app. This includes the code to interact with users, which you can edit and add to.  
-
-Remember, you are not expected to write tests. 
-
-## ⚠️ Please overwrite what is here in the README, so you can use it in your portfolio ⚠️
+### Notes
+This is Assignment 1 for the CFG + Masters Course by Jess Branch 
