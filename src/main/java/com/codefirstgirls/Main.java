@@ -1,5 +1,8 @@
 package com.codefirstgirls;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -12,13 +15,46 @@ public class Main {
         System.out.println("PLEASE ENTER ONE OF THE FOLLOWING TOMATOES TO PLANT");
 
         //print out your list here
-        System.out.println("Gardener's Delight,\nTumbling tom,\nSungold,\nBlack Cherry,\nGreen Zebra");
+        System.out.println("Gardener's Delight,\nTumbling Tom,\nSungold,\nBlack Cherry,\nGreen Zebra");
 
         String tomatoChoice = scanner.nextLine();
         System.out.println("THANKS! HOW MANY WOULD YOU LIKE TO PLANT?");
-        String amountToCreate = scanner.nextLine();
+        int amountToCreate = scanner.nextInt();
 
-        // create the items, and output to the user as appropriate
+        //create an array list to store the tomatoes - created using the parent class so can store any tomato type
+        ArrayList<Tomato> plantedTomatoes = new ArrayList<Tomato>();
+
+        //create the items based on user input
+        switch (tomatoChoice){
+            case "Gardener's Delight":
+                System.out.println("Sorry that tomato isn't ready for planting yet");
+                break;
+            case "Tumbling Tom":
+                System.out.println("Sorry that tomato isn't ready for planting yet");
+                break;
+            case "Sungold":
+                for (int i = 0; i < amountToCreate; i++) {
+                    Sungold sungold = new Sungold();
+                    plantedTomatoes.add(sungold);
+                }
+                break;
+            case "Black Cherry":
+                System.out.println("Sorry that tomato isn't ready for planting yet");
+                break;
+            case "Green Zebra":
+                System.out.println("Sorry that tomato isn't ready for planting yet");
+                break;
+        }
+
+        //display planted tomatoes
+        if (!plantedTomatoes.isEmpty()) {
+            System.out.println("You've planted the following tomatoes:");
+            for (int i = 0; i < plantedTomatoes.size(); i++) {
+
+            }
+        }
+
 
     }
+
 }
