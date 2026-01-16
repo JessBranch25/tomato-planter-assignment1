@@ -1,13 +1,12 @@
 package com.codefirstgirls;
 
 
-public class Plant {
-    private String name;
+abstract class Plant {
+    private String plantName;
     private Lifespan lifespan;
 
-    //constructor
-    public Plant(String name, Lifespan lifespan){
-        this.name = name;
+    public Plant(String plantName, Lifespan lifespan) {
+        this.plantName = plantName;
         this.lifespan = lifespan;
     }
 }
