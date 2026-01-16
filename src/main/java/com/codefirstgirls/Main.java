@@ -13,7 +13,10 @@ public class Main {
         System.out.println("PLEASE ENTER ONE OF THE FOLLOWING TOMATOES TO PLANT");
 
         //print out your list here
-        System.out.println("Gardener's Delight,\nTumbling Tom,\nSungold,\nBlack Cherry,\nGreen Zebra");
+        String[] tomatoVarieties = {"Gardener's Delight", "Tumbling Tom", "Sungold", "Black Cherry", "Green Zebra"};
+        for (String t :tomatoVarieties){
+            System.out.println(t);
+        }
 
         String tomatoChoice = scanner.nextLine();
         System.out.println("*******************************");
@@ -23,13 +26,20 @@ public class Main {
         //create an array list to store the tomatoes - created using the parent class so can store any tomato type
         ArrayList<Tomato> plantedTomatoes = new ArrayList<Tomato>();
 
+
         //create the items based on user input
         switch (tomatoChoice){
             case "Gardener's Delight":
-                System.out.println("Sorry that tomato isn't ready for planting yet");
+                for (int i = 0; i < amountToCreate; i++) {
+                    GardenersDelight gardenersDelight = new GardenersDelight();
+                    plantedTomatoes.add(gardenersDelight);
+                }
                 break;
             case "Tumbling Tom":
-                System.out.println("Sorry that tomato isn't ready for planting yet");
+                for (int i = 0; i < amountToCreate; i++) {
+                    TumblingTom tumblingTom = new TumblingTom();
+                    plantedTomatoes.add(tumblingTom);
+                }
                 break;
             case "Sungold":
                 for (int i = 0; i < amountToCreate; i++) {
@@ -38,11 +48,20 @@ public class Main {
                 }
                 break;
             case "Black Cherry":
-                System.out.println("Sorry that tomato isn't ready for planting yet");
+                for (int i = 0; i < amountToCreate; i++) {
+                    BlackCherry blackCherry = new BlackCherry();
+                    plantedTomatoes.add(blackCherry);
+                }
                 break;
             case "Green Zebra":
-                System.out.println("Sorry that tomato isn't ready for planting yet");
+                for (int i = 0; i < amountToCreate; i++) {
+                    GreenZebra greenZebra = new GreenZebra();
+                    plantedTomatoes.add(greenZebra);
+                }
                 break;
+            default:
+                //handle errors
+                System.out.println("Invalid tomato selection, please try again");
         }
 
         //display planted tomatoes
@@ -57,7 +76,8 @@ public class Main {
 
             for (int i = 0; i < plantedTomatoes.size(); i++) {
                 String name = plantedTomatoes.get(i).getName();
-                System.out.println("Tomato "+(i+1)+" is called "+name);
+                String species = plantedTomatoes.get(i).getSpecies();
+                System.out.println(species+" tomato "+(i+1)+" is called "+name);
             }
 
             System.out.println("*******************************");
